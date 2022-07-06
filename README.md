@@ -1,24 +1,33 @@
 # BFFL-API
 
-## User Story
-- AS A social media startup
-- I WANT an API for my social network that uses a NoSQL database
-- SO THAT my website can handle large amounts of unstructured data
+## Goal
+- To build an API backend for a social media network that uses a NoSQL database so that the website can handle large amounts of unstructured data.
 
 ___
 
 <br>
 
-## Acceptance Criteria
-- GIVEN a social network API
-- WHEN I enter the command to invoke the application
-    - THEN my server is started and the Mongoose models are synced to the MongoDB database
+## Application Details
+- This is the backend for a Social Media application using Mongoose models which are synced to the MongoDB database
+- The routes that have been built for the User model are:
+    - GET all Users, GET User by Id, PUT to update User by Id, POST to create a User, & DELETE a User by Id
+- User model has a virtually created Friends List that has:
+    - POST to add friend to the list array, & DELETE friend from the friend array
+- Routes for the Thought model are:
+    - GET all Thoughts, GET Thought by Id, PUT to update Thought by Id, POST to create a Thought, & DELETE a Thought by Id
+- Thought model has subdocument of Reactions that has:
+    - POST to add Reaction to a Thought by Id, & DELETE a Reaction from a Thought by Id
 
-- WHEN I open API GET routes in Insomnia for users and thoughts
-    - THEN the data for each of these routes is displayed in a formatted JSON
+<br>
 
-- WHEN I test API POST, PUT, and DELETE routes in Insomnia
-    - THEN I am able to successfully create, update, and delete users and thoughts in my database
-    
-- WHEN I test API POST and DELETE routes in Insomnia
-    - THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
+## Challenges Faced
+- Working with the virtually created models to update and delete provided challenges in the Mongoose syntax. Especially with with which exact parameters to pass through when referencing other models.
+- Thinking through how to exactly organize this projects through different directories also took a few changes to make sure it made the most sense.
+
+<br>
+
+## *Links to GitHub repository & a walkthrough video:*
+
+- **[Link to the GitHub Repository](https://github.com/Doctor-Worm/BFFL-API)**
+
+- **[Walkthrough Video](https://drive.google.com/file/d/11VOFpXKvUaoy_BrYLAJU_gk9C2FZProD/view)**
